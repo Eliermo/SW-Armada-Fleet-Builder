@@ -11,8 +11,7 @@ namespace SW_Armda_Fleet_Builder
 {
     public partial class RebelBuilder : Form
     {
-        private Button bttnAdd = new Button();
-        
+             
         public RebelBuilder()
         {
             InitializeComponent();
