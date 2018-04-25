@@ -17,6 +17,10 @@ namespace SW_Armda_Fleet_Builder
             InitializeComponent();
         }
 
-
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            string objective = "Assault";
+            var objChoose = new ObjectiveChoser(objective);
+        }
     }
 }
