@@ -22,6 +22,8 @@ namespace SW_Armda_Fleet_Builder
         {
             string objective = "Assault";
             var objChoose = new ObjectiveChoser(objective);
+            objChoose.Show();
+            //Не хватает передачи управления.
         }
     }
 }
