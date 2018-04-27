@@ -19,10 +19,8 @@ namespace SW_Armda_Fleet_Builder
             InitializeComponent();
 
             string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=sw_armadadb;SslMode=none";
-            // Your query,
             string query = "SELECT CardPic FROM objectivestable WHERE Type = \"" + objective + "\" and ID = 1";
 
-            // Prepare the connection
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             commandDatabase.CommandTimeout = 60;
@@ -30,7 +28,6 @@ namespace SW_Armda_Fleet_Builder
 
             ImageConverter converse = new ImageConverter();
 
-            // Let's do it !
             try
             {
                 // Open the database
@@ -48,19 +45,17 @@ namespace SW_Armda_Fleet_Builder
                 {
                     while (reader.Read())
                     {
-                        // As our database, the array will contain : ID 0, FIRST_NAME 1,LAST_NAME 2, ADDRESS 3
-                        // Do something with every received database ROW
                         pictureBox1.Image = converse.byteArrayToImage((byte[])(reader.GetValue(0)));
-                        /*Если я правильно понял, в данном случае запрос возвращает нам строку с одним элементом (0)
+                        /* запрос возвращает нам строку с одним элементом (0)
                          * БЛОБ, который конвертится в картинку и выдаётся. Если делать так, как надо, то будет кучка строк,
                          * но тоже с ожним элементом.
                          * Комменты решают.
-                         * */
+                         */
                     }
                 }
                 else
                 {
-                    Console.WriteLine("No rows found.");
+                    Console.WriteLine("Nothing found.");
                 }
 
                 // Finally close the connection
@@ -72,6 +67,13 @@ namespace SW_Armda_Fleet_Builder
                 MessageBox.Show(ex.Message);
             }
 
+
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

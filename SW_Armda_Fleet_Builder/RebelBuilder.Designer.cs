@@ -36,17 +36,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.NotesBox = new System.Windows.Forms.RichTextBox();
             this.RfrshPoints = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.assaultPicBox = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.addShip = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.navigationPicBox = new System.Windows.Forms.PictureBox();
+            this.defencePicBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.assaultPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navigationPicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.defencePicBox)).BeginInit();
             this.SuspendLayout();
             // 
             // TitleBox
@@ -110,15 +110,15 @@
             this.RfrshPoints.TabIndex = 6;
             this.RfrshPoints.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // assaultPicBox
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(32, 296);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(240, 335);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.assaultPicBox.Image = ((System.Drawing.Image)(resources.GetObject("assaultPicBox.Image")));
+            this.assaultPicBox.Location = new System.Drawing.Point(32, 296);
+            this.assaultPicBox.Name = "assaultPicBox";
+            this.assaultPicBox.Size = new System.Drawing.Size(240, 335);
+            this.assaultPicBox.TabIndex = 7;
+            this.assaultPicBox.TabStop = false;
+            this.assaultPicBox.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox4
             // 
@@ -132,14 +132,14 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.addShip);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.navigationPicBox);
+            this.panel1.Controls.Add(this.defencePicBox);
             this.panel1.Controls.Add(this.TitleBox);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.PointsInputBox);
             this.panel1.Controls.Add(this.RfrshPoints);
             this.panel1.Controls.Add(this.NotesBox);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.assaultPicBox);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
@@ -157,23 +157,23 @@
             this.addShip.Text = "Добавить корабль";
             this.addShip.UseVisualStyleBackColor = true;
             // 
-            // pictureBox3
+            // navigationPicBox
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(547, 296);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(240, 335);
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
+            this.navigationPicBox.Image = ((System.Drawing.Image)(resources.GetObject("navigationPicBox.Image")));
+            this.navigationPicBox.Location = new System.Drawing.Point(547, 296);
+            this.navigationPicBox.Name = "navigationPicBox";
+            this.navigationPicBox.Size = new System.Drawing.Size(240, 335);
+            this.navigationPicBox.TabIndex = 12;
+            this.navigationPicBox.TabStop = false;
             // 
-            // pictureBox2
+            // defencePicBox
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(289, 296);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(240, 335);
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
+            this.defencePicBox.Image = ((System.Drawing.Image)(resources.GetObject("defencePicBox.Image")));
+            this.defencePicBox.Location = new System.Drawing.Point(289, 296);
+            this.defencePicBox.Name = "defencePicBox";
+            this.defencePicBox.Size = new System.Drawing.Size(240, 335);
+            this.defencePicBox.TabIndex = 12;
+            this.defencePicBox.TabStop = false;
             // 
             // RebelBuilder
             // 
@@ -185,12 +185,12 @@
             this.Controls.Add(this.panel1);
             this.Name = "RebelBuilder";
             this.Text = "RebelBuilder";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assaultPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navigationPicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.defencePicBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,11 +204,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox NotesBox;
         private System.Windows.Forms.Button RfrshPoints;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox assaultPicBox;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox navigationPicBox;
+        private System.Windows.Forms.PictureBox defencePicBox;
         private System.Windows.Forms.Button addShip;
     }
 }

@@ -128,10 +128,10 @@
         AMmoxwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="assaultPicBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPAAAAFPCAYAAABzvkOGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAEAcSURBVHhe7d3Zs2xlff9xHG680L/AlP+Dt3phld6lUpVK
+        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAEAcSURBVHhe7d3Zs2xlff9xHG680L/AlP+Dt3phld6lUpVK
         lYlxJmqIs3EeEnFWEmeMA46JihIVFNEYUIwgIpiAAzhGmUQlEyBEIZKsn+9Ff3ae0/bnnH3Ofu/6Vaqe
         T9U63f3qZw17n/6uZ429TzpW7nnPey483ute91oe+tCHLqeddtpy9tlnLxdccMHyla98ZbniiiuWf/qn
         f1r+8R//cR14Pr4erbltx9P2IHY8bQ9io++y0Q9io++y0W07nrYHseNpexA7VlueUzvUELVETVFb1Bi1
@@ -513,10 +513,10 @@
         xnqKDP87NTX1VFi1knkZTFKKNGMy7YNpBzFKrBKzxG5TTM9Nyxf9D+HTSPFFHCb+AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="navigationPicBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPAAAAFPCAIAAAD83NTRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAENNSURBVHhe7Z1ZsxVVnr6p4aYuqj5BddR3qNuqi4qoir7p
+        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAENNSURBVHhe7Z1ZsxVVnr6p4aYuqj5BddR3qNuqi4qoir7p
         6A6ro+2hFBEHBgdmUKAERCgVQUVmBIdmVOQwqsyjyFQis4wiHA6IZRfzVNjt/9n5S5Y73yNwznn9R5Sw
         nggz8nlz5crce/9y7ZV5zpF2N+KHP/whyx/96Ee//e1vn3/++YaGhuXLl3/44Yfbtm376KOP/lzASlqH
         UCj9Bg1KaZlC6X/HvZXy99RbKd/n3lih2Cg5Co/yowgpRQoyFWeLoGns84tf/GL48OH0tWXLlk8++eTo
@@ -806,10 +806,10 @@
         Uyj977i3Uv6eeivl+9wbKxQbJUfhUX4UIaUYo+0N67hdu/8H4qs243vyd6YAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="defencePicBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPAAAAFPCAIAAAD83NTRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAECWSURBVHhe7Z3Zk1Xlvf7JcJOL5C/IqfwPuU0uUpXcnXMq
+        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAECWSURBVHhe7Z3Zk1Xlvf7JcJOL5C/IqfwPuU0uUpXcnXMq
         p86p1EklIuLApCLzZARUiIqiIvOMkVGkGVXmUUAkAso8ydA0iPGEeRJz/H32+i5e93paoJvHX1WO/X4u
         dq3Ps9611u7uZ7/97tXd0O52fP/73+fxBz/4wa9//esXXnihoaFh1apVW7Zs2bFjx4cffvjXAjbSNoRC
         6bcZUErLFEr/Jz5bKf9MZyvl//LZ2KBsVI7iUT9KSBUpZCpni2BoHPOzn/1s+PDhnOuDDz7Yv3//iRMn
