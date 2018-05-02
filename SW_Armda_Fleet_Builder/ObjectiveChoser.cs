@@ -14,9 +14,15 @@ namespace SW_Armda_Fleet_Builder
 {
     public partial class ObjectiveChoser : Form
     {
-        public ObjectiveChoser(string objective)
+        string objective;
+
+        public ObjectiveChoser(string obj, out Image chosenOb)
         {
             InitializeComponent();
+
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RebelBuilder));
+
+            objective = obj;
 
             string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=sw_armadadb;SslMode=none";
             string query = "SELECT CardPic FROM objectivestable WHERE Type = \"" + objective + "\" and ID = 1";
@@ -27,6 +33,8 @@ namespace SW_Armda_Fleet_Builder
             MySqlDataReader reader;
 
             ImageConverter converse = new ImageConverter();
+
+            chosenOb = ((Image)(resources.GetObject("assaultPicBox.Image")));
 
             try
             {
@@ -45,7 +53,8 @@ namespace SW_Armda_Fleet_Builder
                 {
                     while (reader.Read())
                     {
-                        pictureBox1.Image = converse.byteArrayToImage((byte[])(reader.GetValue(0)));
+                        chosenOb = converse.byteArrayToImage((byte[])(reader.GetValue(0)));
+                        pictureBox1.Image = chosenOb;
                         /* запрос возвращает нам строку с одним элементом (0)
                          * БЛОБ, который конвертится в картинку и выдаётся. Если делать так, как надо, то будет кучка строк,
                          * но тоже с ожним элементом.
@@ -73,7 +82,8 @@ namespace SW_Armda_Fleet_Builder
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+            MessageBox.Show(objective);
+            this.Close();
         }
     }
 }

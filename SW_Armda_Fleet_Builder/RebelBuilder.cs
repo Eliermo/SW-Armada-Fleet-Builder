@@ -21,8 +21,11 @@ namespace SW_Armda_Fleet_Builder
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             string objective = "Assault";
-            var objChoose = new ObjectiveChoser(objective);
+            Image chosenOb;
+            var objChoose = new ObjectiveChoser(objective, out chosenOb);
+            assaultPicBox.Image = chosenOb;
             objChoose.Show();
+
             //Не хватает блокировки.
         }
     }
