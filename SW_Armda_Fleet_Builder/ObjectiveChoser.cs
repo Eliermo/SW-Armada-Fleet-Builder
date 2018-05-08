@@ -19,13 +19,13 @@ namespace SW_Armda_Fleet_Builder
         public ObjectiveChoser(string obj, out Image chosenOb)
         {
             InitializeComponent();
-
+            VerticalScroll.Enabled = true;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RebelBuilder));
 
             objective = obj;
 
             string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=sw_armadadb;SslMode=none";
-            string query = "SELECT CardPic FROM objectivestable WHERE Type = \"" + objective + "\" and ID = 1";
+            string query = "SELECT CardPic FROM objectivestable WHERE Type = \"" + objective + "\"";
 
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
@@ -51,14 +51,44 @@ namespace SW_Armda_Fleet_Builder
 
                 if (reader.HasRows)
                 {
+                    int picArrSize = 20;
+                    PictureBox[] picArray = new PictureBox[picArrSize];
+                    int iii = 0;
+                    int yyy = 1;
                     while (reader.Read())
                     {
-                        chosenOb = converse.byteArrayToImage((byte[])(reader.GetValue(0)));
-                        pictureBox1.Image = chosenOb;
-                        /* запрос возвращает нам строку с одним элементом (0)
-                         * БЛОБ, который конвертится в картинку и выдаётся. Если делать так, как надо, то будет кучка строк,
-                         * но тоже с ожним элементом.
-                         * Комменты решают.
+                        picArray[iii] = new PictureBox();
+                        //picArray[iii].Size = new Size(1,1);
+                        picArray[iii].SizeMode = PictureBoxSizeMode.AutoSize;
+                        picArray[iii].Location = new Point((iii * 250), yyy);
+                        //picArray[iii].BackgroundImage = Properties.Resources.cardback;
+                        //picArray[iii].BackgroundImageLayout = ImageLayout.Stretch;
+                        picArray[iii].Image = converse.byteArrayToImage((byte[])(reader.GetValue(0)));
+                        picArray[iii].Anchor = AnchorStyles.Left|AnchorStyles.Top;
+                        picArray[iii].Visible = true;
+                        this.Controls.Add(picArray[iii]);
+                        if (iii % 3 == 0 && iii != 0) {
+                            yyy += 340;
+                            iii = -1;
+                        };
+                        iii++;
+                        /*
+                        int iii = 1;
+                        picArray[iii] = new PictureBox();
+                        picArray[iii].Visible = true;
+                        picArray[iii].Anchor = AnchorStyles.Left;
+                        picArray[iii].SizeMode = PictureBoxSizeMode.AutoSize;
+                        picArray[iii].Location = new Point(iii * 196, 47);
+                        picArray[iii].Image = convi.byteArrayToImage((byte[])(reader.GetValue(0)));
+                        iii++;
+                        pictureBox1.Image = convi.byteArrayToImage((byte[])(reader.GetValue(0)));
+                        this.Controls.Add(picArray[iii]);
+                        */
+                        //chosenOb = converse.byteArrayToImage((byte[])(reader.GetValue(0)));
+                        //pictureBox1.Image = chosenOb;
+                        /* запрос возвращает нам массив, в нашем случае с одним эелементом (0)
+                         * БЛОБ, который конвертится в картинку и выдаётся. Потом лупается "пока"
+                         * и выдаётся новый массив, пока таблица не закончится
                          */
                     }
                 }
