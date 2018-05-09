@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(892, 265);
+            this.ClientSize = new System.Drawing.Size(948, 542);
             this.Name = "ObjectiveChoser";
             this.Text = "Objective Choser";
             this.ResumeLayout(false);

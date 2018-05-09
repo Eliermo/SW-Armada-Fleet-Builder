@@ -53,7 +53,7 @@
             // 
             this.TitleBox.Location = new System.Drawing.Point(32, 77);
             this.TitleBox.Name = "TitleBox";
-            this.TitleBox.Size = new System.Drawing.Size(280, 20);
+            this.TitleBox.Size = new System.Drawing.Size(280, 21);
             this.TitleBox.TabIndex = 0;
             // 
             // label1
@@ -70,7 +70,7 @@
             // 
             this.PointsInputBox.Location = new System.Drawing.Point(344, 77);
             this.PointsInputBox.Name = "PointsInputBox";
-            this.PointsInputBox.Size = new System.Drawing.Size(100, 20);
+            this.PointsInputBox.Size = new System.Drawing.Size(100, 21);
             this.PointsInputBox.TabIndex = 2;
             // 
             // label2
@@ -165,6 +165,7 @@
             this.navigationPicBox.Size = new System.Drawing.Size(240, 335);
             this.navigationPicBox.TabIndex = 12;
             this.navigationPicBox.TabStop = false;
+            this.navigationPicBox.Click += new System.EventHandler(this.navigationPicBox_Click);
             // 
             // defencePicBox
             // 
@@ -174,6 +175,7 @@
             this.defencePicBox.Size = new System.Drawing.Size(240, 335);
             this.defencePicBox.TabIndex = 12;
             this.defencePicBox.TabStop = false;
+            this.defencePicBox.Click += new System.EventHandler(this.defencePicBox_Click);
             // 
             // RebelBuilder
             // 
@@ -181,7 +183,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1031, 620);
+            this.ClientSize = new System.Drawing.Size(1051, 620);
             this.Controls.Add(this.panel1);
             this.Name = "RebelBuilder";
             this.Text = "RebelBuilder";

@@ -12,7 +12,7 @@ namespace SW_Armda_Fleet_Builder
 {
     public partial class RebelBuilder : Form
     {
-             
+        public static Image passer;     
         public RebelBuilder()
         {
             InitializeComponent();
@@ -21,12 +21,30 @@ namespace SW_Armda_Fleet_Builder
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             string objective = "Assault";
-            Image chosenOb;
-            var objChoose = new ObjectiveChoser(objective, out chosenOb);
-            assaultPicBox.Image = chosenOb;
-            objChoose.Show();
+            var objChoose = new ObjectiveChoser(objective);
+            objChoose.ShowDialog(this); //Ждём закрытия ObjectiveChoser
+            assaultPicBox.Image = passer;
+            assaultPicBox.Update();
 
-            //Не хватает блокировки.
+            
+        }
+
+        private void defencePicBox_Click(object sender, EventArgs e)
+        {
+            string objective = "Defence";
+            var objChoose = new ObjectiveChoser(objective);
+            objChoose.ShowDialog(this); //Ждём закрытия ObjectiveChoser
+            defencePicBox.Image = passer;
+            defencePicBox.Update();
+        }
+
+        private void navigationPicBox_Click(object sender, EventArgs e)
+        {
+            string objective = "Navigation";
+            var objChoose = new ObjectiveChoser(objective);
+            objChoose.ShowDialog(this); //Ждём закрытия ObjectiveChoser
+            navigationPicBox.Image = passer;
+            navigationPicBox.Update();
         }
     }
 }

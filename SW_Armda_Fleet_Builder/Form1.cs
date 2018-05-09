@@ -19,7 +19,7 @@ namespace SW_Armda_Fleet_Builder
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Этот кусок позволяет переключиться на форму2, а по её закрытии -- назад.
+            //Этот кусок позволяет переключиться на форму2, а по её закрытии -- назад. Временно это убрал.
             var frm = new RebelBuilder();
             frm.Location = this.Location;
             frm.StartPosition = FormStartPosition.Manual;
