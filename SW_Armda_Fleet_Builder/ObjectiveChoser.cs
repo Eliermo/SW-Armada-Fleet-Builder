@@ -22,7 +22,7 @@ namespace SW_Armda_Fleet_Builder
         {
             InitializeComponent();
 
-            string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=sw_armadadb;SslMode=none";
+            string connectionString = "server=46.216.17.228;port=3306;username=root;password=;database=sw_armadadb;SslMode=none";
             string query = "SELECT CardPic FROM objectivestable WHERE Type = \"" + obj + "\"";
 
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
