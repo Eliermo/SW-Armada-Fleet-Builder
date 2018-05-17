@@ -19,14 +19,13 @@ namespace SW_Armda_Fleet_Builder
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Этот кусок позволяет переключиться на форму2, а по её закрытии -- назад. Временно это убрал.
-            var frm = new RebelBuilder();
+            //Этот кусоxtr позволяет переключиться на форму2, а по её закрытии -- назад.
+            var frm = new Form2();
             frm.Location = this.Location;
             frm.StartPosition = FormStartPosition.Manual;
             frm.FormClosing += delegate { this.Show(); };
             frm.Show();
             this.Hide();
-            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -34,6 +33,8 @@ namespace SW_Armda_Fleet_Builder
             MessageBox.Show("Эта функция ещё не релизована");
         }
 
-        
+        private void button3_Click(object sender, EventArgs e) {
+            MessageBox.Show("Не допускается использование символов \"?, /, #, *, |\".");
+        }
     }
 }

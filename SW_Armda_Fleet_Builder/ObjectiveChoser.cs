@@ -22,7 +22,7 @@ namespace SW_Armda_Fleet_Builder
         {
             InitializeComponent();
 
-            string connectionString = "server=46.216.17.228;port=3306;username=root;password=;database=sw_armadadb;SslMode=none";
+            string connectionString = "server=127.0.0.1;port=3306;username=root;password=;database=sw_armadadb;SslMode=none";
             string query = "SELECT CardPic FROM objectivestable WHERE Type = \"" + obj + "\"";
 
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
@@ -65,7 +65,7 @@ namespace SW_Armda_Fleet_Builder
                 }
                 else
                 {
-                    Console.WriteLine("Nothing found.");
+                    Console.WriteLine("Ничего не найдено.");
                 }
 
                 // Finally close the connection
@@ -82,7 +82,7 @@ namespace SW_Armda_Fleet_Builder
         void PicArray_Click(object sender, EventArgs e)
         {
             PictureBox thisBox = sender as PictureBox;
-            RebelBuilder.passer = thisBox.Image;
+            RebelBuilder.picPasser = thisBox.Image;
             this.Close();
         }
 

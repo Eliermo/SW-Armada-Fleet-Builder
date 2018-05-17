@@ -12,8 +12,9 @@ namespace SW_Armda_Fleet_Builder
 {
     public partial class RebelBuilder : Form
     {
-        public static Image passer;
-        
+        public static Image picPasser;
+        public static string side;
+
         public class SWShip : PictureBox {
             public int Cost;
             public bool Defencive;
@@ -34,9 +35,10 @@ namespace SW_Armda_Fleet_Builder
 
         }
 
-        public RebelBuilder()
+        public RebelBuilder(string sidePass)
         {
             InitializeComponent();
+            side = sidePass;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -44,8 +46,12 @@ namespace SW_Armda_Fleet_Builder
             string objective = "Assault";
             var objChoose = new ObjectiveChoser(objective);
             objChoose.ShowDialog(this); //Ждём закрытия ObjectiveChoser
-            assaultPicBox.Image = passer;
-            assaultPicBox.Update();
+            if (picPasser == null) { } else {
+                assaultPicBox.Image = picPasser;
+                assaultPicBox.Update();
+                picPasser = null;
+            }
+            
 
             
         }
@@ -55,8 +61,11 @@ namespace SW_Armda_Fleet_Builder
             string objective = "Defence";
             var objChoose = new ObjectiveChoser(objective);
             objChoose.ShowDialog(this); //Ждём закрытия ObjectiveChoser
-            defencePicBox.Image = passer;
-            defencePicBox.Update();
+            if (picPasser == null) { } else {
+                defencePicBox.Image = picPasser;
+                defencePicBox.Update();
+                picPasser = null;
+            }
         }
 
         private void navigationPicBox_Click(object sender, EventArgs e)
@@ -64,8 +73,11 @@ namespace SW_Armda_Fleet_Builder
             string objective = "Navigation";
             var objChoose = new ObjectiveChoser(objective);
             objChoose.ShowDialog(this); //Ждём закрытия ObjectiveChoser
-            navigationPicBox.Image = passer;
-            navigationPicBox.Update();
+            if (picPasser == null) { } else {
+                navigationPicBox.Image = picPasser;
+                navigationPicBox.Update();
+                picPasser = null;
+            }
         }
 
         private void testButt_Click(object sender, EventArgs e)
@@ -74,6 +86,13 @@ namespace SW_Armda_Fleet_Builder
             testShip.Ordnance = true;
             testShip.WeaponsTeam = true;
             
+        }
+
+        private void testingButton_Click(object sender, EventArgs e) {
+            SWShip testShip = new SWShip();
+            testShip.Location = new Point(18, 70);
+            squadronsPanel.Location = new Point(33, 1250);
+            panel1.Size = new Size(1129, 1342);
         }
     }
 }

@@ -18,17 +18,22 @@ namespace SW_Armda_Fleet_Builder
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var frm = new RebelBuilder();
+            var frm = new RebelBuilder("Rebel");
             frm.Location = this.Location;
             frm.StartPosition = FormStartPosition.Manual;
-            frm.FormClosing += delegate { this.Show(); };
+            frm.FormClosing += delegate { this.Close(); };
             frm.Show();
             this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Эта функция находится в разработке");
+            var frm = new RebelBuilder("Empire");
+            frm.Location = this.Location;
+            frm.StartPosition = FormStartPosition.Manual;
+            frm.FormClosing += delegate { this.Close(); };
+            frm.Show();
+            this.Hide();
         }
     }
 }

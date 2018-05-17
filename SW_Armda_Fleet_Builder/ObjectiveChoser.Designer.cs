@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ObjectiveChoser));
             this.SuspendLayout();
             // 
             // ObjectiveChoser
@@ -36,8 +37,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(948, 542);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ObjectiveChoser";
-            this.Text = "Objective Choser";
+            this.Text = "Селектор Карт";
             this.ResumeLayout(false);
 
         }
